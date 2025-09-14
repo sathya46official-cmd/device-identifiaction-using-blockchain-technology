@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device DID System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Device DID System</h1>
+
+        <!-- Tab Navigation -->
+        <div class="tabs">
+            <button id="registerTab" class="active">Register Device</button>
+            <button id="authenticateTab">Authenticate Device</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div id="registerTabContent" class="tab-content active">
+            <h2>Register a Device</h2>
+            <input type="text" id="deviceDID" placeholder="Enter Device DID">
+            <input type="text" id="deviceName" placeholder="Enter Device Name (Optional)">
+            <select id="deviceType">
+                <option value="IoT Device">IoT Device</option>
+                <option value="Smartphone">Smartphone</option>
+                <option value="Laptop">Laptop</option>
+                <option value="Tablet">Tablet</option>
+                <option value="Smart Watch">Smart Watch</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="password" id="devicePassword" placeholder="Enter Device Password">
+            
+            <!-- Show Password for Register Section -->
+            <div class="checkbox-container">
+                <label for="registerShowPassword">Show Password</label>
+                <input type="checkbox" id="registerShowPassword">
+            </div>
+
+            <button id="registerDevice">Register Device</button>
+        </div>
+
+        <div id="authenticateTabContent" class="tab-content">
+            <h2>Authenticate a Device</h2>
+            <input type="text" id="authDeviceDID" placeholder="Enter Device DID">
+            <input type="password" id="authPassword" placeholder="Enter Password">
+
+            <!-- Show Password for Authenticate Section -->
+            <div class="checkbox-container">
+                <label for="showPassword">Show Password</label>
+                <input type="checkbox" id="showPassword">
+            </div>
+
+            <button id="authenticate">Authenticate</button>
+        </div>
+
+        <!-- Result Display -->
+        <div id="result"></div>
+        
+        <!-- Admin Link (Hidden by default) -->
+        <div class="admin-link" id="adminLinkContainer" style="display: none;">
+            <a href="admin_login.html" target="_blank">Admin Panel</a>
+        </div>
+    </div>
+</body>
+</html>
